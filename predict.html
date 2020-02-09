@@ -37,8 +37,8 @@
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 					  <li><a href="blog-home.html">Home</a></li>
-					  <li><a href="about.html">About</a></li>	
-					  <li><a href="predict.html">Waste Classifier</a></li>				          					          		          
+                      <li><a href="about.html">About</a></li>	
+                      <li><a href="predict.html">Waste Classifier</a></li>						          					          		          
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
@@ -51,7 +51,7 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								About				
+								Waste Classifier			
 							</h1>	
 						</div>	
 					</div>
@@ -63,64 +63,20 @@
 			<section class="home-about-area section-gap">
 				<div class="container">
 					<div class="row align-items-center justify-content-between">
-						<div class="col-lg-6 col-md-6 home-about-left">
-							<img class="img-fluid" src="img/about-img.png" alt="">
-						</div>
-						<div class="col-lg-5 col-md-6 home-about-right">
-							<h1 class="text-uppercase">Sustainability</h1>
-							<p>
-								Sustainability is a word that we increasingly come across in 
-								all aspects of life. We probably all have an overall understanding 
-								that it is about the avoidance of the depletion of natural 
-								resources in order to maintain an ecological balance. In business, 
-								we may see it more specifically as the idea that goods and services
-								should be produced in ways that do not use resources that cannot 
-								be replaced and that do not damage the environment. Sustainability 
-								is a broad subject and can be broken down into many different sections 
-								that all affect our lives on a day to day basis. We can positively 
-								contribute to each of these areas to help sustain the world for future 
-								generations. By recycling, we can make a remarkable difference to our planet.
-							</p>
-						</div>
 						<div class="col-lg-12 pt-60">
-							<h1 class="text-uppercase">About Us</h1>
+							<h1 class="text-uppercase">Upload an image of your waste here</h1>
 							<p>
-									Our idea was to train an algorithm so that it is able to 
-									recognise different kinds of materials by image processing. This algorithm
-									is then able to sort waste into 6 different categories. Essentially, this 
-									is supposed to be part of the software for a waste recycling machine since 
-									many people do not recycle their waste correctly which has a huge negative environmental
-									impact. 
+                                <h4 style="margin: auto;width: 80%; text-align: center; margin-top: 20px;  text-transform: uppercase">What category is your waste?</h4>
+                                <div style="width: 90%; margin: auto; text-align: center">
+                                    <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px">
+                                    <p style="font-style: italic">{{ image_file_name }}</p>
+                                
+                                
+                                    <h3><b>I'm <span style="color: green;"></span> sure this is
+                                        <span style="color: red;">{{ label }}</span></b></h3>
+                                     <a href="blog-home.html">Back to Home</a>
+                                </div>
 							</p>
-							<h4 class="pt-30">Some interesting data...</h4>	
-						</div>
-					</div>
-					<div class="row skillbar-wraps">					
-						<div class="col-lg-12 skill-left">
-							<div class="single-skill">
-								<p>
-									How much material we can recycle 75%
-								</p>
-								<div class="skill" data-width="75"></div>
-							</div>
-							<div class="single-skill">
-								<p>
-									How much we actually recycle 34%
-								</p>
-								<div class="skill" data-width="34"></div>
-							</div>
-							<div class="single-skill">
-								<p>
-									Efficiency of our algorithm 94%
-								</p>
-								<div class="skill" data-width="94"></div>
-							</div>	
-							<div class="single-skill">
-									<p>
-										Improvement due to our algorithm 71%
-									</p>
-									<div class="skill" data-width="71"></div>
-								</div>																				
 						</div>
 					</div>
 				</div>	
